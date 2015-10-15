@@ -1,3 +1,49 @@
 body {
   font-family: $main-font;
 }
+
+nav.navbar-default {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  border-radius: 0;
+
+  .navbar-brand, .navbar-nav>li>a {
+    &, &:hover, &:visited, &:active {
+      color: $light-font-color;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .navbar-nav>li>a {
+    transition: transform 0.3s ease-in;
+
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+}
+
+h2 {
+  background-color: $primary-color;
+  color: $white;
+  font-weight: 100;
+  padding: 0.5em 0 0.5em 1em;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from($white), to($primary-color));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, $primary-color, $white);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, $primary-color, $white);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(left, $primary-color, $white);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, $primary-color, $white);
+}
